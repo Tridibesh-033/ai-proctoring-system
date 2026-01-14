@@ -1,5 +1,5 @@
 import uuid
-from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, String, ForeignKey, Float, Enum
 from sqlalchemy.dialects.postgresql import UUID
 from app.database import Base
 
@@ -26,4 +26,8 @@ class Resume(Base):
     )
 
     file_path = Column(String, nullable=False)
+
+    score= Column(Float, default=0.0)
+
+    status = Column(String, default="pending")
 
