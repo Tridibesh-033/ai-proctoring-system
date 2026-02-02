@@ -5,10 +5,13 @@ __pycache__/
 *.env
 .env
 myenv/
-.env/
+.myenv/
 
 uploads/
+static/
+
 database.py
+*.log
 
 
 # OS

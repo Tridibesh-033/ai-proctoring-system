@@ -14,4 +14,4 @@ class User(Base):
     )
     email = Column(String, unique=True, index=True)
     password = Column(String,nullable=False)
-    role = Column(String,nullable=False)    # recruiter / candidate
+    role = Column(String,nullable=False)       # recruiter / candidate

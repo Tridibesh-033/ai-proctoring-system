@@ -35,11 +35,10 @@ def recruiter_only(current_user):
     if current_user.role != "recruiter":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
-            detail="Only recruiters are allowed to post jobs"
+            detail="Only recruiters are allowed"
         )
 
 def candidate_only(current_user):
     if current_user.role != "candidate":
-        raise HTTPException(status_code=403, detail="Only candidates can upload resumes")
-
+        raise HTTPException(status_code=403, detail="Only candidates are allowed")   
 
